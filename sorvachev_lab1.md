@@ -35,6 +35,7 @@ UPDATE ticket_flights SET amount = amount + 1000 FROM flights WHERE ticket_fligh
 SELECT EXTRACT(HOUR FROM actual_departure) AS hour_of_day, count(*) AS flight_count FROM flights WHERE departure_airport = 'DME' GROUP BY hour_of_day ORDER BY hour_of_day;
 ```
 # получаем: #
+```
  hour_of_day | flight_count 
 -------------+--------------
            0 |            1
@@ -54,5 +55,6 @@ SELECT EXTRACT(HOUR FROM actual_departure) AS hour_of_day, count(*) AS flight_co
           22 |            7
           23 |            5
              |         1591
+```
 (17 строк)
 
